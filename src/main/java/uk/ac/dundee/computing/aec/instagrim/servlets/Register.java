@@ -48,11 +48,16 @@ public class Register extends HttpServlet {
         String username=request.getParameter("username");
         String password=request.getParameter("password");
         
+        //Checks to see if the username and password fields have information
+        if(!username.isEmpty() && !password.isEmpty()){
+        
         User us=new User();
         us.setCluster(cluster);
         us.RegisterUser(username, password);
+        response.sendRedirect("/Instagrim");
+            }
         
-	response.sendRedirect("/Instagrim");
+	response.sendRedirect("/Instagrim/register.jsp");
         
     }
 

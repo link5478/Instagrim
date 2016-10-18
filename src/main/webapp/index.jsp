@@ -4,7 +4,10 @@
     Author     : Administrator
 --%>
 
-
+<%-- 
+https://image.freepik.com/free-icon/human-skull-with-crossed-bones-silhouette_318-46669.jpg
+https://5a5a57ff32a328601212-ee0df397c56b146e91fe14be42fa361d.ssl.cf1.rackcdn.com/icon/instagram_logos_glyph/03H5cHNMt-Jni4pe9u+7/glyph-logo_May2016_200.png
+--%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="uk.ac.dundee.computing.aec.instagrim.stores.*" %>
 <!DOCTYPE html>

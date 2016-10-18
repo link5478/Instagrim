@@ -28,8 +28,12 @@
             <h3>Register as user</h3>
             <form method="POST"  action="Register">
                 <ul>
-                    <li>User Name <input type="text" name="username"></li>
-                    <li>Password <input type="password" name="password"></li>
+                    <li>User Name <input type="text" name="username">
+                        <p>Username minimum of 6 characters and 15 maximum</p>
+                    </li>
+                    <li>Password <input type="password" name="password">
+                        <p>Password minimum of 6</p>
+                    </li>
                 </ul>
                 <br/>
                 <input type="submit" value="Register"> 

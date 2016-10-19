@@ -44,6 +44,15 @@ public class Register extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     @Override
+            
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+                RequestDispatcher rd = request.getRequestDispatcher("/register.jsp");
+                rd.forward(request, response);
+        
+        
+    }
+    
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String username=request.getParameter("username");

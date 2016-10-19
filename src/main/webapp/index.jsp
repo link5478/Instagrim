@@ -19,9 +19,14 @@ https://5a5a57ff32a328601212-ee0df397c56b146e91fe14be42fa361d.ssl.cf1.rackcdn.co
     </head>
     <body>
         <header>
-            <h1>InstaGrim ! </h1>
+            <h1><img src="http://i.imgur.com/uQt8X0g.jpg" align = 
+                     "right"> InstaGrim ! </h1>
             <h2>Your world in Black and White</h2>
+            
         </header>
+        
+        
+        
         <nav>
             <ul>
 

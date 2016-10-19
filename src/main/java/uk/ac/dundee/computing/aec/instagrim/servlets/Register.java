@@ -51,6 +51,7 @@ public class Register extends HttpServlet {
         
         //Checks to see if the username and password fields have information
         if(!username.isEmpty() && !password.isEmpty()){
+            
         
             if(username.length() >= 6 && username.length() <= 15
                     && password.length() >= 6){   
@@ -61,10 +62,26 @@ public class Register extends HttpServlet {
                 response.sendRedirect("/Instagrim/registersuccess.jsp");
                 return;
                 }
-                       
+            else{
+                
+                request.setAttribute("error", "Fields must contain data");
+                RequestDispatcher rd = request.getRequestDispatcher("/register.jsp");
+                rd.forward(request, response);
+                return;
+                
             }
-        
-	response.sendRedirect("/Instagrim/register.jsp");
+            
+            
+            }
+        else{
+                
+            request.setAttribute("error", "Invalid input");
+            RequestDispatcher rd = request.getRequestDispatcher("/register.jsp");
+            rd.forward(request, response);
+            return;
+                
+            }
+	
         
     }
 

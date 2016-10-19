@@ -38,6 +38,12 @@
                 </ul>
                 <br/>
                 <input type="submit" value="Register"> 
+                
+                <%String s = (String)request.getAttribute("error");
+                if(s != null){
+                    out.println(s);
+                }%>
+                
             </form>
 
         </article>

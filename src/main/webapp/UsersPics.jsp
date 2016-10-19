@@ -17,8 +17,9 @@
     <body>
         <header>
         
-        <h1>InstaGrim ! </h1>
-        <h2>Your world in Black and White</h2>
+        <h1><img src="http://i.imgur.com/uQt8X0g.jpg" align = 
+                     "right"> InstaGrim ! </h1>
+            <h2>Your world in Black and White</h2>
         </header>
         
         <nav>

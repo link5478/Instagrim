@@ -24,39 +24,30 @@ https://5a5a57ff32a328601212-ee0df397c56b146e91fe14be42fa361d.ssl.cf1.rackcdn.co
                      "right"> InstaGrim ! </h1>
             <h2>Your world in Black and White</h2>    
         </header>
-        
-        
-        
-        <nav>
-            <ul>
-
-               
-                <li><a href="/Instagrim/Upload">Upload</a></li>
-                    <%
-                        
-                        LoggedIn lg = (LoggedIn) session.getAttribute("LoggedIn");
-                        if (lg != null) {
-                            String UserName = lg.getUsername();
-                            if (lg.getloggedin()) {
-                    %>
-
-                <li><a href="/Instagrim/Images/<%=lg.getUsername()%>">Your Images</a></li>
-                <li><a href="/Instagrim/LogOut">Logout</a></li>
-                
-                    <%}
-                            }else{
-                                %>
-                 <li><a href="/Instagrim/Register">Register</a></li>
-                <li><a href="/Instagrim/Login">Login</a></li>
+        <div>
+ 
                 <%
-                                        
-                            
-                    }%>
-            </ul>
-        </nav>
+
+                    LoggedIn lg = (LoggedIn) session.getAttribute("LoggedIn");
+                    if (lg != null) {
+                        String UserName = lg.getUsername();
+                        if (lg.getloggedin()) {
+                %>
+                <a href="/Instagrim/Upload">Upload</a>
+                <a href="/Instagrim/Images/<%=lg.getUsername()%>">Your Images</a>
+                <a href="/Instagrim/LogOut">Logout</a>
+
+                <%}
+                } else {
+                %>
+                <a href="/Instagrim/Register">Register</a>
+                <a href="/Instagrim/Login">Login</a>
+                <%
+                        }%>
+
+        </div>
         <footer>
             <ul>
-                <li class="footer"><a href="/Instagrim">Home</a></li>
                 <li>&COPY; Carsten C</li>
             </ul>
         </footer>

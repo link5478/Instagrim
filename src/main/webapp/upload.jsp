@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="uk.ac.dundee.computing.aec.instagrim.stores.*" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -16,12 +17,30 @@
         <h1><img src="http://i.imgur.com/uQt8X0g.jpg" align = 
                      "right"> InstaGrim ! </h1>
             <h2>Your world in Black and White</h2>
-        <nav>
-            <ul>
-                <li class="nav"><a href="/Instagrim/Upload">Upload</a></li>
-                <li class="nav"><a href="/Instagrim/Images/majed">Sample Images</a></li>
-            </ul>
-        </nav>
+            
+        <div>
+
+                <a href="/Instagrim">Home</a>
+                <a href="/Instagrim/Images/majed">Sample Images</a>
+                <%
+
+                    LoggedIn lg = (LoggedIn) session.getAttribute("LoggedIn");
+                    if (lg != null) {
+                        String UserName = lg.getUsername();
+                        if (lg.getloggedin()) {
+                %>
+                <a href="/Instagrim/Images/<%=lg.getUsername()%>">Your Images</a>
+                
+                <%}
+                
+                        
+
+                }%>
+
+                    
+
+                
+            </div>
  
         <article>
             <h3>File Upload</h3>
@@ -35,7 +54,7 @@
         </article>
         <footer>
             <ul>
-                <li class="footer"><a href="/Instagrim">Home</a></li>
+                <li>&COPY; Carsten C</li>
             </ul>
         </footer>
     </body>

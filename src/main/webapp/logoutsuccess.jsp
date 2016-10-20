@@ -9,15 +9,15 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Instagrim</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+
     </body>
     
     <header>
             <h1><img src="http://i.imgur.com/uQt8X0g.jpg" align = 
-                     "right"> InstaGrim ! </h1>
+                     "right"> InstaGrim </h1>
             <h2>Your world in Black and White</h2>
             
         </header>

@@ -74,7 +74,7 @@ public class Login extends HttpServlet {
 
                 session.setAttribute("LoggedIn", lg);
                 System.out.println("Session in servlet "+session);
-                RequestDispatcher rd=request.getRequestDispatcher("/Instagrim/LoginSucess");
+                RequestDispatcher rd=request.getRequestDispatcher("loginsuccess.jsp");
                 rd.forward(request,response);
 
             }

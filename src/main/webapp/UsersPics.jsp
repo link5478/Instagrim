@@ -25,6 +25,7 @@
         <div>
 
                 <a href="/Instagrim">Home</a>
+                
                 <a href="/Instagrim/Images/majed">Sample Images</a>   
                 
                 <%
@@ -34,6 +35,7 @@
                         String UserName = lg.getUsername();
                         if (lg.getloggedin()) {
                 %>
+                <a href="/Instagrim/Upload">Upload</a>
                 <a href="/Instagrim/LogOut">Logout</a>
                 
                 <%}

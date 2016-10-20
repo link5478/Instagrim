@@ -74,18 +74,19 @@ public class Login extends HttpServlet {
 
                 session.setAttribute("LoggedIn", lg);
                 System.out.println("Session in servlet "+session);
-                RequestDispatcher rd=request.getRequestDispatcher("loginsuccess.jsp");
+                RequestDispatcher rd=request.getRequestDispatcher("/Instagrim/LoginSucess");
                 rd.forward(request,response);
 
             }
             else{
-                
+                request.setAttribute("error", "ERROR: Invalid Profile");
                 RequestDispatcher rd=request.getRequestDispatcher("login.jsp");
                 rd.forward(request,response);
             }
         }
         
         else{
+            request.setAttribute("error", "ERROR: One or both fields are empty");
             RequestDispatcher rd=request.getRequestDispatcher("login.jsp");
                 rd.forward(request,response);
             

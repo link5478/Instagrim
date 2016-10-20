@@ -30,7 +30,7 @@
                         if (lg.getloggedin()) {
                 %>
                 <a href="/Instagrim/Images/<%=lg.getUsername()%>">Your Images</a>
-                
+                <a href="/Instagrim/LogOut">Logout</a>
                 <%}
                 
                         

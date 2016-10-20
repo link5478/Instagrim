@@ -22,12 +22,30 @@
             <h2>Your world in Black and White</h2>
         </header>
         
-        <nav>
-            <ul>
-                <li class="nav"><a href="/Instagrim/upload.jsp">Upload</a></li>
-                <li class="nav"><a href="/Instagrim/Images/majed">Sample Images</a></li>
-            </ul>
-        </nav>
+        <div>
+
+                <a href="/Instagrim">Home</a>
+                <a href="/Instagrim/Images/majed">Sample Images</a>   
+                
+                <%
+
+                    LoggedIn lg = (LoggedIn) session.getAttribute("LoggedIn");
+                    if (lg != null) {
+                        String UserName = lg.getUsername();
+                        if (lg.getloggedin()) {
+                %>
+                <a href="/Instagrim/LogOut">Logout</a>
+                
+                <%}
+                
+                        
+
+                }%>
+                
+                
+
+                
+            </div>
  
         <article>
             <h1>Your Pics</h1>
@@ -52,7 +70,7 @@
         </article>
         <footer>
             <ul>
-                <li class="footer"><a href="/Instagrim">Home</a></li>
+                <li>&COPY; Carsten C</li>
             </ul>
         </footer>
     </body>

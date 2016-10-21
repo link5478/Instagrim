@@ -18,7 +18,7 @@ import uk.ac.dundee.computing.aec.instagrim.lib.Convertors;
  *
  * @author carstencheyne
  */
-@WebServlet(name = "Profile", urlPatterns = {"/Profile, /Profile/*"})
+@WebServlet(name = "Profile", urlPatterns = {"/Profile", "/Profile/*"})
 public class Profile extends HttpServlet {
 
     /**

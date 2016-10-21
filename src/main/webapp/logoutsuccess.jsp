@@ -25,7 +25,7 @@
     <br> <br> <br>
     
     <h2> You have logged out successfully. You will be redirected to the homepage
-        in 5 seconds</h2>
+        in 5 seconds. If the page doesn't redirect you click <a href="/Instagrim">here</a></h2>
     
     <%-- This code was obtained from http://stackoverflow.com/questions/23596931/forwarding-jsp-page-after-the-delay --%>
     <script>

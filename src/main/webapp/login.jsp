@@ -25,6 +25,9 @@
                 <a href="/Instagrim">Home</a> &nbsp; &nbsp;
                 <a href="/Instagrim/Images/majed">Sample Images</a> &nbsp; &nbsp;
                 <a href="/Instagrim/Register">Register</a> &nbsp; &nbsp;
+                <a href="/Instagrim/ContactUs">Contact Us</a> &nbsp; &nbsp;
+
+                
                 
             </div>
 

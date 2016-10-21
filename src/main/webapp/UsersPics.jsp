@@ -36,7 +36,7 @@
                         if (lg.getloggedin()) {
                 %>
                 <a href="/Instagrim/Upload">Upload</a> &nbsp; &nbsp;
-                <a href="/Instagrim/LogOut">Logout</a>
+                <a href="/Instagrim/LogOut">Logout</a>&nbsp; &nbsp;
                 
                 <%}
                 
@@ -44,7 +44,8 @@
 
                 }%>
                 
-                
+                <a href="/Instagrim/ContactUs">Contact Us</a> &nbsp; &nbsp;
+
 
                 
             </div>

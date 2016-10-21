@@ -33,17 +33,22 @@ https://5a5a57ff32a328601212-ee0df397c56b146e91fe14be42fa361d.ssl.cf1.rackcdn.co
                         String UserName = lg.getUsername();
                         if (lg.getloggedin()) {
                 %>
+                <a href="/Instagrim/Profile/<%=lg.getUsername()%>">Profile</a> &nbsp; &nbsp;
                 <a href="/Instagrim/Upload">Upload</a> &nbsp; &nbsp;
                 <a href="/Instagrim/Images/<%=lg.getUsername()%>">Your Images</a> &nbsp; &nbsp;
-                <a href="/Instagrim/LogOut">Logout</a>
+                <a href="/Instagrim/LogOut">Logout</a> &nbsp; &nbsp;
 
                 <%}
                 } else {
                 %>
                 <a href="/Instagrim/Register">Register</a> &nbsp; &nbsp;
-                <a href="/Instagrim/Login">Login</a> 
+                <a href="/Instagrim/Login">Login</a> &nbsp; &nbsp;
                 <%
                         }%>
+                <a href="/Instagrim/ContactUs">Contact Us</a> &nbsp; &nbsp;
+
+                
+                
 
         </div>
         <footer>

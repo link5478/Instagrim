@@ -21,7 +21,7 @@ https://5a5a57ff32a328601212-ee0df397c56b146e91fe14be42fa361d.ssl.cf1.rackcdn.co
     <body>
         <header>
             <h1><img src="http://i.imgur.com/uQt8X0g.jpg" align = 
-                     "right"> InstaGrim ! </h1>
+                     "right"> InstaGrim </h1>
             <h2>Your world in Black and White</h2>    
         </header>
         <div>
@@ -48,7 +48,7 @@ https://5a5a57ff32a328601212-ee0df397c56b146e91fe14be42fa361d.ssl.cf1.rackcdn.co
         </div>
         <footer>
             <ul>
-                <li>&COPY; Carsten C</li>
+                <li>&COPY; Carsten C & Andy C</li>
             </ul>
         </footer>
     </body>

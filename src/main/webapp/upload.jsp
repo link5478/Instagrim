@@ -15,7 +15,7 @@
     </head>
     <body>
         <h1><img src="http://i.imgur.com/uQt8X0g.jpg" align = 
-                     "right"> InstaGrim ! </h1>
+                     "right"> InstaGrim </h1>
             <h2>Your world in Black and White</h2>
             
         <div>
@@ -54,7 +54,7 @@
         </article>
         <footer>
             <ul>
-                <li>&COPY; Carsten C</li>
+                <li>&COPY; Carsten C & Andy C</li>
             </ul>
         </footer>
     </body>

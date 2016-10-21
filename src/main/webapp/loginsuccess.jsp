@@ -34,4 +34,8 @@
          document.location = "/Instagrim";
             }, 5000); // <-- this is the delay in milliseconds
     </script>
+    
+    <footer>
+                <p>&COPY; Carsten C & Andy C</p>
+    </footer>
 </html>

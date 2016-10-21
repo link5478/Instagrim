@@ -22,9 +22,9 @@
 
             <div>
 
-                <a href="/Instagrim">Home</a>
-                <a href="/Instagrim/Images/majed">Sample Images</a>
-                <a href="/Instagrim/Register">Register</a>
+                <a href="/Instagrim">Home</a> &nbsp; &nbsp;
+                <a href="/Instagrim/Images/majed">Sample Images</a> &nbsp; &nbsp;
+                <a href="/Instagrim/Register">Register</a> &nbsp; &nbsp;
                 
             </div>
 
@@ -48,9 +48,7 @@
 
         </article>
         <footer>
-            <ul>
-                <li>&COPY; Carsten C & Andy C</li>
-            </ul>
+                <p>&COPY; Carsten C & Andy C</p>
         </footer>
     </body>
 </html>

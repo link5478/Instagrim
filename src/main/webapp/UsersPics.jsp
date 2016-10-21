@@ -24,9 +24,9 @@
         
         <div>
 
-                <a href="/Instagrim">Home</a>
+                <a href="/Instagrim">Home</a> &nbsp; &nbsp;
                 
-                <a href="/Instagrim/Images/majed">Sample Images</a>   
+                <a href="/Instagrim/Images/majed">Sample Images</a> &nbsp; &nbsp;   
                 
                 <%
 
@@ -35,7 +35,7 @@
                         String UserName = lg.getUsername();
                         if (lg.getloggedin()) {
                 %>
-                <a href="/Instagrim/Upload">Upload</a>
+                <a href="/Instagrim/Upload">Upload</a> &nbsp; &nbsp;
                 <a href="/Instagrim/LogOut">Logout</a>
                 
                 <%}
@@ -71,9 +71,7 @@
         %>
         </article>
         <footer>
-            <ul>
-                <li>&COPY; Carsten C & Andy C</li>
-            </ul>
+                <p>&COPY; Carsten C & Andy C</p>
         </footer>
     </body>
 </html>

@@ -49,7 +49,11 @@
                 <br/>
                 <input type="submit" value="Press"> to upload the file!
             </form>
-
+            
+            <%String s = (String) request.getAttribute("succeeded");
+                    if (s != null) {
+                        out.println(s);
+                    }%>
         </article>
         <footer>
             <p>&COPY; Carsten C & Andy C</p>

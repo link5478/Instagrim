@@ -147,6 +147,7 @@ public class Image extends HttpServlet {
 
                 is.close();
             }
+            request.setAttribute("succeeded", "Success. Go to Your Images to see your picture.");
             RequestDispatcher rd = request.getRequestDispatcher("/upload.jsp");
             rd.forward(request, response);
         }

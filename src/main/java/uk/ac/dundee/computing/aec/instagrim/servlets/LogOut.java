@@ -30,8 +30,6 @@ public class LogOut extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    
-
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
@@ -44,17 +42,15 @@ public class LogOut extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-                HttpSession session = request.getSession();
-        
-                session.invalidate();
-                RequestDispatcher rd = request.getRequestDispatcher("/logoutsuccess.jsp");
-                rd.forward(request,response);
-        
-        
+
+        HttpSession session = request.getSession();
+
+        session.invalidate();
+        RequestDispatcher rd = request.getRequestDispatcher("/logoutsuccess.jsp");
+        rd.forward(request, response);
+
     }
 
-    
     /**
      * Returns a short description of the servlet.
      *

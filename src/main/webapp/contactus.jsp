@@ -29,18 +29,18 @@
                         String UserName = lg.getUsername();
                         if (lg.getloggedin()) {
                 %>
+                <a href="/Instagrim/Profile/<%=lg.getUsername()%>">Profile</a> &nbsp; &nbsp;
+                <a href="/Instagrim/Upload">Upload</a> &nbsp; &nbsp;
                 <a href="/Instagrim/Images/<%=lg.getUsername()%>">Your Images</a> &nbsp; &nbsp;
-                <a href="/Instagrim/LogOut">Logout</a>
+                <a href="/Instagrim/LogOut">Logout</a> &nbsp; &nbsp;
+
                 <%}
-                    else {
+                } else {
                 %>
                 <a href="/Instagrim/Register">Register</a> &nbsp; &nbsp;
-                <a href="/Instagrim/Login">Login</a> 
+                <a href="/Instagrim/Login">Login</a> &nbsp; &nbsp;
                 <%
-                        }
-                        
-
-                }%>
+                        }%>
 
                     
 

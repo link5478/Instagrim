@@ -15,32 +15,34 @@
     </head>
     <body>
         <h1><img src="http://i.imgur.com/uQt8X0g.jpg" align = 
-                 "right"> InstaGrim </h1>
-        <h2>Your world in Black and White</h2>
-
+                     "right"> InstaGrim </h1>
+            <h2>Your world in Black and White</h2>
+            
         <div>
 
-            <a href="/Instagrim">Home</a> &nbsp; &nbsp;
-            <a href="/Instagrim/Images/majed">Sample Images</a> &nbsp; &nbsp;
-            <%
+                <a href="/Instagrim">Home</a> &nbsp; &nbsp;
+                <a href="/Instagrim/Images/majed">Sample Images</a> &nbsp; &nbsp;
+                <%
 
-                LoggedIn lg = (LoggedIn) session.getAttribute("LoggedIn");
-                if (lg != null) {
-                    String UserName = lg.getUsername();
-                    if (lg.getloggedin()) {
-            %>
-            <a href="/Instagrim/Images/<%=lg.getUsername()%>">Your Images</a> &nbsp; &nbsp;
-            <a href="/Instagrim/LogOut">Logout</a>&nbsp; &nbsp;
-            <%}
+                    LoggedIn lg = (LoggedIn) session.getAttribute("LoggedIn");
+                    if (lg != null) {
+                        String UserName = lg.getUsername();
+                        if (lg.getloggedin()) {
+                %>
+                <a href="/Instagrim/Images/<%=lg.getUsername()%>">Your Images</a> &nbsp; &nbsp;
+                <a href="/Instagrim/LogOut">Logout</a>&nbsp; &nbsp;
+                <%}
+                
+                        
 
-                    }%>
-            <a href="/Instagrim/ContactUs">Contact Us</a> &nbsp; &nbsp;
+                }%>
+                <a href="/Instagrim/ContactUs">Contact Us</a> &nbsp; &nbsp;
 
+                    
 
-
-
-        </div>
-
+                
+            </div>
+ 
         <article>
             <h3>File Upload</h3>
             <form method="POST" enctype="multipart/form-data" action="Image">
@@ -52,7 +54,7 @@
 
         </article>
         <footer>
-            <p>&COPY; Carsten C & Andy C</p>
+                <p>&COPY; Carsten C & Andy C</p>
         </footer>
     </body>
 </html>

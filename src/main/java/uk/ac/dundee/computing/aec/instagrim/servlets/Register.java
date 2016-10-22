@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package uk.ac.dundee.computing.aec.instagrim.servlets;
 
 import com.datastax.driver.core.Cluster;
@@ -24,13 +25,15 @@ import uk.ac.dundee.computing.aec.instagrim.models.User;
  */
 @WebServlet(name = "Register", urlPatterns = {"/Register"})
 public class Register extends HttpServlet {
-
-    Cluster cluster = null;
-
+    Cluster cluster=null;
     public void init(ServletConfig config) throws ServletException {
         // TODO Auto-generated method stub
         cluster = CassandraHosts.getCluster();
     }
+
+
+    
+
 
     /**
      * Handles the HTTP <code>POST</code> method.
@@ -41,48 +44,54 @@ public class Register extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     @Override
-
+            
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        RequestDispatcher rd = request.getRequestDispatcher("/register.jsp");
-        rd.forward(request, response);
-
+                RequestDispatcher rd = request.getRequestDispatcher("/register.jsp");
+                rd.forward(request, response);
+        
+        
     }
-
+    
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
-
+        String username=request.getParameter("username");
+        String password=request.getParameter("password");
+        
         //Checks to see if the username and password fields have information
-        if (!username.isEmpty() && !password.isEmpty()) {
-
-            if (username.length() >= 6 && username.length() <= 15
-                    && password.length() >= 6) {
-
-                User us = new User();
+        if(!username.isEmpty() && !password.isEmpty()){
+            
+        
+            if(username.length() >= 6 && username.length() <= 15
+                    && password.length() >= 6){   
+                
+                User us=new User();
                 us.setCluster(cluster);
                 us.RegisterUser(username, password);
                 response.sendRedirect("/Instagrim/RegisterSuccess");
                 return;
-            } else {
-
+                }
+            else{
+                
                 request.setAttribute("error", "Fields must contain data");
                 RequestDispatcher rd = request.getRequestDispatcher("/register.jsp");
                 rd.forward(request, response);
                 return;
-
+                
             }
-
-        } else {
-
+            
+            
+            }
+        else{
+                
             request.setAttribute("error", "Invalid input");
             RequestDispatcher rd = request.getRequestDispatcher("/register.jsp");
             rd.forward(request, response);
             return;
-
-        }
-
+                
+            }
+	
+        
     }
 
     /**

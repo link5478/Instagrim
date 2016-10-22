@@ -18,7 +18,7 @@ import uk.ac.dundee.computing.aec.instagrim.lib.Convertors;
  *
  * @author carstencheyne
  */
-@WebServlet(name = "Profile", urlPatterns = {"/Profile", "/Profile/*", "/profile", "/profile/*"})
+@WebServlet(name = "Profile", urlPatterns = {"/Profile", "/Profile/*"})
 public class Profile extends HttpServlet {
 
     /**
@@ -30,6 +30,8 @@ public class Profile extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
+    
+
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
@@ -40,18 +42,20 @@ public class Profile extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     @Override
-
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+    
+            protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
-        String args[] = Convertors.SplitRequestPath(request);
-
-        request.setAttribute("username", args[2]);
-
-        RequestDispatcher rd = request.getRequestDispatcher("/profile.jsp");
-        rd.forward(request, response);
-
+                
+                String args[] = Convertors.SplitRequestPath(request);
+                
+                request.setAttribute("username", args[2]);
+                
+                RequestDispatcher rd = request.getRequestDispatcher("/profile.jsp");
+                rd.forward(request, response);
+        
+        
     }
+    
 
     /**
      * Handles the HTTP <code>POST</code> method.

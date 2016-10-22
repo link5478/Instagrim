@@ -40,7 +40,7 @@
             <a href="/Instagrim/Register">Register</a> &nbsp; &nbsp;
             <a href="/Instagrim/Login">Login</a> &nbsp; &nbsp;
             <%
-                    }%>
+                }%>
 
 
 

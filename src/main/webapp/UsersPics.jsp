@@ -40,7 +40,7 @@
 
             <%}
 
-                    }%>
+                }%>
 
             <a href="/Instagrim/ContactUs">Contact Us</a> &nbsp; &nbsp;
 

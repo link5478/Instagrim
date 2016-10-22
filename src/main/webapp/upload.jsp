@@ -33,7 +33,7 @@
             <a href="/Instagrim/LogOut">Logout</a>&nbsp; &nbsp;
             <%}
 
-                    }%>
+                }%>
             <a href="/Instagrim/ContactUs">Contact Us</a> &nbsp; &nbsp;
 
 

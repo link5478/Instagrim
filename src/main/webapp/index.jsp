@@ -25,34 +25,34 @@ https://5a5a57ff32a328601212-ee0df397c56b146e91fe14be42fa361d.ssl.cf1.rackcdn.co
             <h2>Your world in Black and White</h2>    
         </header>
         <div>
- 
-                <%
 
-                    LoggedIn lg = (LoggedIn) session.getAttribute("LoggedIn");
-                    if (lg != null) {
-                        String UserName = lg.getUsername();
-                        if (lg.getloggedin()) {
-                %>
-                <a href="/Instagrim/Profile/<%=lg.getUsername()%>">Profile</a> &nbsp; &nbsp;
-                <a href="/Instagrim/Upload">Upload</a> &nbsp; &nbsp;
-                <a href="/Instagrim/Images/<%=lg.getUsername()%>">Your Images</a> &nbsp; &nbsp;
-                <a href="/Instagrim/LogOut">Logout</a> &nbsp; &nbsp;
+            <%
 
-                <%}
-                } else {
-                %>
-                <a href="/Instagrim/Register">Register</a> &nbsp; &nbsp;
-                <a href="/Instagrim/Login">Login</a> &nbsp; &nbsp;
-                <%
-                        }%>
-                <a href="/Instagrim/ContactUs">Contact Us</a> &nbsp; &nbsp;
+                LoggedIn lg = (LoggedIn) session.getAttribute("LoggedIn");
+                if (lg != null) {
+                    String UserName = lg.getUsername();
+                    if (lg.getloggedin()) {
+            %>
+            <a href="/Instagrim/Profile/<%=lg.getUsername()%>">Profile</a> &nbsp; &nbsp;
+            <a href="/Instagrim/Upload">Upload</a> &nbsp; &nbsp;
+            <a href="/Instagrim/Images/<%=lg.getUsername()%>">Your Images</a> &nbsp; &nbsp;
+            <a href="/Instagrim/LogOut">Logout</a> &nbsp; &nbsp;
 
-                
-                
+            <%}
+            } else {
+            %>
+            <a href="/Instagrim/Register">Register</a> &nbsp; &nbsp;
+            <a href="/Instagrim/Login">Login</a> &nbsp; &nbsp;
+            <%
+                    }%>
+            <a href="/Instagrim/ContactUs">Contact Us</a> &nbsp; &nbsp;
+
+
+
 
         </div>
         <footer>
-                <p>&COPY; Carsten C & Andy C</p>
+            <p>&COPY; Carsten C & Andy C</p>
         </footer>
     </body>
 </html>

@@ -16,63 +16,61 @@
     </head>
     <body>
         <header>
-        
-        <h1><img src="http://i.imgur.com/uQt8X0g.jpg" align = 
+
+            <h1><img src="http://i.imgur.com/uQt8X0g.jpg" align = 
                      "right"> InstaGrim </h1>
             <h2>Your world in Black and White</h2>
         </header>
-        
+
         <div>
 
-                <a href="/Instagrim">Home</a> &nbsp; &nbsp;
-                
-                <a href="/Instagrim/Images/majed">Sample Images</a> &nbsp; &nbsp;   
-                
-                <%
+            <a href="/Instagrim">Home</a> &nbsp; &nbsp;
 
-                    LoggedIn lg = (LoggedIn) session.getAttribute("LoggedIn");
-                    if (lg != null) {
-                        String UserName = lg.getUsername();
-                        if (lg.getloggedin()) {
-                %>
-                <a href="/Instagrim/Upload">Upload</a> &nbsp; &nbsp;
-                <a href="/Instagrim/LogOut">Logout</a>&nbsp; &nbsp;
-                
-                <%}
-                
-                        
+            <a href="/Instagrim/Images/majed">Sample Images</a> &nbsp; &nbsp;   
 
-                }%>
-                
-                <a href="/Instagrim/ContactUs">Contact Us</a> &nbsp; &nbsp;
+            <%
+
+                LoggedIn lg = (LoggedIn) session.getAttribute("LoggedIn");
+                if (lg != null) {
+                    String UserName = lg.getUsername();
+                    if (lg.getloggedin()) {
+            %>
+            <a href="/Instagrim/Upload">Upload</a> &nbsp; &nbsp;
+            <a href="/Instagrim/LogOut">Logout</a>&nbsp; &nbsp;
+
+            <%}
+
+                    }%>
+
+            <a href="/Instagrim/ContactUs">Contact Us</a> &nbsp; &nbsp;
 
 
-                
-            </div>
- 
+
+        </div>
+
         <article>
             <h1>Your Pics</h1>
-        <%
-            java.util.LinkedList<Pic> lsPics = (java.util.LinkedList<Pic>) request.getAttribute("Pics");
-            if (lsPics == null) {
-        %>
-        <p>No Pictures found</p>
-        <%
-        } else {
-            Iterator<Pic> iterator;
-            iterator = lsPics.iterator();
-            while (iterator.hasNext()) {
-                Pic p = (Pic) iterator.next();
+            <%
+                java.util.LinkedList<Pic> lsPics = (java.util.LinkedList<Pic>) request.getAttribute("Pics");
+                if (lsPics == null) {
+            %>
+            <p>No Pictures found</p>
+            <%
+            } else {
+                Iterator<Pic> iterator;
+                iterator = lsPics.iterator();
+                while (iterator.hasNext()) {
+                    Pic p = (Pic) iterator.next();
 
-        %>
-        <a href="/Instagrim/Image/<%=p.getSUUID()%>" ><img src="/Instagrim/Thumb/<%=p.getSUUID()%>"></a><br/><%
+            %>
+            <a href="/Instagrim/Image/<%=p.getSUUID()%>" ><img src="/Instagrim/Thumb/<%=p.getSUUID()%>"></a><br/><%
 
-            }
-            }
-        %>
+                    }
+                }
+                %>
         </article>
         <footer>
-                <p>&COPY; Carsten C & Andy C</p>
+            <p>&COPY; Carsten C & Andy C</p>
         </footer>
     </body>
 </html>

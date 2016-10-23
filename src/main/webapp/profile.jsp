@@ -20,6 +20,7 @@
             <h2>Your world in Black and White</h2>    
         </header>
         <div>
+            <a href="/Instagrim">Home</a> &nbsp; &nbsp;
 
             <%
 
@@ -47,12 +48,30 @@
             <a href="/Instagrim/LogOut">Logout</a> &nbsp; &nbsp;
             <p> Welcome, <%=lg.getUsername()%> </p>
 
+
             <%
 
                 }%>
 
+            <%
+                java.util.ArrayList<String> details = (java.util.ArrayList<String>) request.getAttribute("details");
+                if (details == null || details.size() == 0) {
+                    String who = (String) request.getAttribute("user");
+            %>
+            <p> There is no account with the username: <%= who%> </p>
+            <%
+            } else {
 
-            <p> Hohofo </p>
+            %>
+            <p> Username: <%=details.get(0)%> </p>
+            <p> First Name: <%=details.get(1)%> </p>
+            <p> Last Name: <%=details.get(2)%> </p>
+            <%
+                }
+            %>
+
+
+
 
         </div>
         <footer>

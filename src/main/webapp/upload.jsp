@@ -30,12 +30,21 @@
                     if (lg.getloggedin()) {
             %>
             <a href="/Instagrim/Images/<%=lg.getUsername()%>">Your Images</a> &nbsp; &nbsp;
-            <a href="/Instagrim/LogOut">Logout</a>&nbsp; &nbsp;
             <%}
 
                 }%>
             <a href="/Instagrim/ContactUs">Contact Us</a> &nbsp; &nbsp;
 
+            <%
+                if (lg != null) {
+
+            %>
+            <a href="/Instagrim/LogOut">Logout</a>&nbsp; &nbsp;
+            <p> Welcome, <%=lg.getUsername()%> </p>
+
+            <%
+
+                }%>
 
 
 
@@ -49,11 +58,11 @@
                 <br/>
                 <input type="submit" value="Press"> to upload the file!
             </form>
-            
+
             <%String s = (String) request.getAttribute("succeeded");
-                    if (s != null) {
-                        out.println(s);
-                    }%>
+                if (s != null) {
+                    out.println(s);
+                }%>
         </article>
         <footer>
             <p>&COPY; Carsten C & Andy C</p>

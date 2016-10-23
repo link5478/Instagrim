@@ -44,6 +44,16 @@
 
             <a href="/Instagrim/ContactUs">Contact Us</a> &nbsp; &nbsp;
 
+            <%
+                if (lg != null) {
+
+            %>
+            <p> Welcome, <%=lg.getUsername()%> </p>
+
+            <%
+
+                }%>
+
 
 
         </div>

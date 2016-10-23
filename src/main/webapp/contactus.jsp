@@ -21,7 +21,6 @@
         <div>
 
             <a href="/Instagrim">Home</a> &nbsp; &nbsp;
-            <a href="/Instagrim/Images/majed">Sample Images</a> &nbsp; &nbsp;
             <%
 
                 LoggedIn lg = (LoggedIn) session.getAttribute("LoggedIn");

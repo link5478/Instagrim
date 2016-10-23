@@ -26,8 +26,6 @@
 
             <a href="/Instagrim">Home</a> &nbsp; &nbsp;
 
-            <a href="/Instagrim/Images/majed">Sample Images</a> &nbsp; &nbsp;   
-
             <%
 
                 LoggedIn lg = (LoggedIn) session.getAttribute("LoggedIn");
@@ -35,6 +33,7 @@
                     String UserName = lg.getUsername();
                     if (lg.getloggedin()) {
             %>
+            <a href="/Instagrim/Profile/<%=lg.getUsername()%>">Profile</a> &nbsp; &nbsp;
             <a href="/Instagrim/Upload">Upload</a> &nbsp; &nbsp;
 
             <%}

@@ -51,13 +51,16 @@ public class Profile extends HttpServlet {
             RequestDispatcher rd = request.getRequestDispatcher("/index.jsp");
             rd.forward(request, response);
         }
-        request.setAttribute("user", args[2]);
+        
+        String username = args[2];
+        
+        request.setAttribute("user", username);
 
         ProfileData pdata = new ProfileData();
         pdata.setCluster(cluster);
-        ArrayList<String> details = pdata.RetrieveDetails(args[2]);
-        if (details != null) {
-            request.setAttribute("details", details);
+        ArrayList<String> information = pdata.Retrieveinformation(username);
+        if (information != null) {
+            request.setAttribute("information", information);
         }
 
         RequestDispatcher rd = request.getRequestDispatcher("/profile.jsp");

@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author carstencheyne
+ * @author carstencheyne 
  */
 public class ProfileData {
 
@@ -28,16 +28,16 @@ public class ProfileData {
         this.cluster = cluster;
     }
 
-    public ArrayList<String> RetrieveDetails(String User) {
+    public ArrayList<String> Retrieveinformation(String User) {
         ArrayList<String> details = new ArrayList<>();
         Session session = cluster.connect("instagrim");
         PreparedStatement ps = session.prepare("select login, first_name, last_name from userprofiles where login =?");
-        ResultSet rs = null;
+        ResultSet rs;
         BoundStatement boundStatement = new BoundStatement(ps);
         rs = session.execute( // this is where the query is executed
                 boundStatement.bind( // here you are binding the 'boundStatement'
                         User));
-        if (rs.isExhausted() || rs == null) {
+        if (rs.isExhausted()) {
             System.out.println("No details found");
             return null;
         } else {

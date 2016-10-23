@@ -6,6 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="uk.ac.dundee.computing.aec.instagrim.stores.*" %>
+<%@page import="java.util.ArrayList"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -54,8 +55,8 @@
                 }%>
 
             <%
-                java.util.ArrayList<String> details = (java.util.ArrayList<String>) request.getAttribute("details");
-                if (details == null || details.size() == 0) {
+                ArrayList<String> information = (ArrayList<String>) request.getAttribute("information");
+                if (information == null) {
                     String who = (String) request.getAttribute("user");
             %>
             <p> There is no account with the username: <%= who%> </p>
@@ -63,9 +64,9 @@
             } else {
 
             %>
-            <p> Username: <%=details.get(0)%> </p>
-            <p> First Name: <%=details.get(1)%> </p>
-            <p> Last Name: <%=details.get(2)%> </p>
+            <p> Username: <%=information.get(0)%> </p>
+            <p> First Name: <%=information.get(1)%> </p>
+            <p> Last Name: <%=information.get(2)%> </p>
             <%
                 }
             %>
